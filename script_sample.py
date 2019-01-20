@@ -4,8 +4,6 @@ from tqdm import tqdm_notebook as tqdm
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import KFold, StratifiedKFold
 import time 
-import numpy as np
-import pandas as pd
 import datetime
 import gc
 import matplotlib.pyplot as plt
