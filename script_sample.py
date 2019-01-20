@@ -1,3 +1,30 @@
+import pandas as pd
+import numpy as np
+from tqdm import tqdm_notebook as tqdm
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import KFold, StratifiedKFold
+import time 
+import numpy as np
+import pandas as pd
+import datetime
+import gc
+import matplotlib.pyplot as plt
+import seaborn as sns
+import lightgbm as lgb
+import warnings
+warnings.filterwarnings('ignore')
+np.random.seed(4590)
+import os 
+
+
+df_train = pd.read_csv('chunk_train.csv' )
+df_test = pd.read_csv('chunk_test.csv')
+
+
+df_train_columns = [c for c in df_train.columns if c not in ['card_id', 'first_active_month','target','outliers']]
+target = df_train['target']
+del df_train['target']
+
 
 param = {'num_leaves': 120,
          'objective':'regression',
