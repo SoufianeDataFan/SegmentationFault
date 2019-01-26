@@ -1,3 +1,9 @@
+#######################################################################
+############### This model requires GPU power to understand ############
+############### the problem of segementation fault ####################
+#######################################################################
+
+
 import pandas as pd
 import numpy as np
 from tqdm import tqdm_notebook as tqdm
